@@ -19,4 +19,4 @@ sepal_length = st.slider('sepal length', 0.0, 5.0, 2.5)
 sepal_width = st.slider('sepal width', 0.0, 5.0, 2.5)
 
 '''dynamic'''
-clf.predict([[sepal_length, sepall_width]])
+clf.predict([[sepal_length, sepal_width]])
