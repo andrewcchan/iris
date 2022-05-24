@@ -15,7 +15,7 @@ clf = load('./iris.joblib')
 testRes = clf.predict([[-0.8, -1]])
 testRes
 
-sepal_len = st.slider('sepal length', 0.0, 5.0, 2.5)
+sepal_length = st.slider('sepal length', 0.0, 5.0, 2.5)
 sepal_width = st.slider('sepal width', 0.0, 5.0, 2.5)
 
 '''dynamic'''
