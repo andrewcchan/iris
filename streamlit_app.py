@@ -14,3 +14,5 @@ st.title('Iris Dataset')
 clf = load('./iris.joblib')
 testRes = clf.predict([[-0.8, -1]])
 testRes
+
+age = st.slider('sepal length', 0, 5, 2.5)
