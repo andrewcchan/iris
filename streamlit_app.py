@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from joblib import dump, load
+import plotly.express as px
+
 
 # APP
 
@@ -21,3 +23,10 @@ sepal_width = st.slider('sepal width', 0.0, 5.0, 2.5)
 '''dynamic'''
 res = clf.predict([[sepal_length, sepal_width]])
 res
+
+
+df = pd.DataFrame(dict(
+    r=[sepal_length,sepal_width],
+    theta=['sepal_length','sepal_width']))
+fig = px.line_polar(df, r='r', theta='theta', line_close=True)
+st.plotly_chart(fig)
