@@ -2,5 +2,4 @@ streamlit
 matplotlib
 numpy
 joblib
-pickle
 scikit-learn
