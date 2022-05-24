@@ -15,4 +15,7 @@ clf = load('./iris.joblib')
 testRes = clf.predict([[-0.8, -1]])
 testRes
 
-age = st.slider('sepal length', 0.0, 5.0, 2.5)
+sepal_len = st.slider('sepal length', 0.0, 5.0, 2.5)
+sepall_width = st.sliderr('sepal width', 0.0, 5.0, 2.5)
+
+clf.predictt([[sepal_length, sepall_width]])
