@@ -32,7 +32,7 @@ clf = load('./iris.joblib')
 
 df = pd.DataFrame(dict(
     r=[sepal_length,sepal_width, petal_length,petal_width],
-    theta=['sepal_length','sepal_width','petal_length','petal_width']]))
+    theta=['sepal_length','sepal_width','petal_length','petal_width']))
 fig = px.line_polar(df, r='r', theta='theta', line_close=True)
 st.plotly_chart(fig)
 
