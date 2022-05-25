@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from joblib import dump, load
 import plotly.express as px
 
+# model from here: https://colab.research.google.com/drive/1RROEcn1EaI564_TlptQquU9HF68q7E38?usp=sharing
 
 # APP
 
@@ -22,8 +23,11 @@ st.title('Iris Dataset')
 
 sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
 sepal_width = st.slider('sepal width', 2.0, 4.4, (2.0+4.4)/2)
-petal_length = st.slider('sepal width', 1.0, 6.9, (1.0+6.9)/2)
-petal_width = st.slider('sepal width', 0.1, 2.5, (0.1+2.5)/2)
+petal_length = st.slider('petal length', 1.0, 6.9, (1.0+6.9)/2)
+petal_width = st.slider('petal width', 0.1, 2.5, (0.1+2.5)/2)
+
+# load clf
+clf = load('./iris.joblib')
 
 
 '''Prediction'''
