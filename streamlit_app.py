@@ -30,13 +30,13 @@ petal_width = st.slider('petal width', 0.1, 2.5, (0.1+2.5)/2)
 clf = load('./iris.joblib')
 
 
-'''Prediction'''
-res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])
-st.write(res)
-
-
 df = pd.DataFrame(dict(
-    r=[sepal_length,sepal_width],
-    theta=['sepal_length','sepal_width']))
+    r=[sepal_length,sepal_width, petal_length,petal_width],
+    theta=['sepal_length','sepal_width','petal_length','petal_width']]))
 fig = px.line_polar(df, r='r', theta='theta', line_close=True)
 st.plotly_chart(fig)
+
+
+'''Prediction'''
+res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
+st.write(res)
