@@ -14,10 +14,10 @@ st.title('Iris Dataset')
 '''https://colab.research.google.com/drive/10O1KYBqC_Cw1lMTbS2x4bCSRTsEdS7_r#scrollTo=hIOxoY8S7dE2'''
 
 
-sepal length (cm) min 4.3 max 7.9
-sepal width (cm) min 2.0 max 4.4
-petal length (cm) min 1.0 max 6.9
-petal width (cm) min 0.1 max 2.5
+# sepal length (cm) min 4.3 max 7.9
+# sepal width (cm) min 2.0 max 4.4
+# petal length (cm) min 1.0 max 6.9
+# petal width (cm) min 0.1 max 2.5
 
 
 sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
