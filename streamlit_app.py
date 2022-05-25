@@ -13,16 +13,22 @@ import plotly.express as px
 st.title('Iris Dataset')
 '''https://colab.research.google.com/drive/10O1KYBqC_Cw1lMTbS2x4bCSRTsEdS7_r#scrollTo=hIOxoY8S7dE2'''
 
-clf = load('./iris.joblib')
-testRes = clf.predict([[-0.8, -1]])
-testRes
 
-sepal_length = st.slider('sepal length', 0.0, 5.0, 2.5)
-sepal_width = st.slider('sepal width', 0.0, 5.0, 2.5)
+sepal length (cm) min 4.3 max 7.9
+sepal width (cm) min 2.0 max 4.4
+petal length (cm) min 1.0 max 6.9
+petal width (cm) min 0.1 max 2.5
 
-'''dynamic'''
-res = clf.predict([[sepal_length, sepal_width]])
-res
+
+sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
+sepal_width = st.slider('sepal width', 2.0, 4.4, (2.0+4.4)/2)
+petal_length = st.slider('sepal width', 1.0, 6.9, (1.0+6.9)/2)
+petal_width = st.slider('sepal width', 0.1, 2.5, (0.1+2.5)/2)
+
+
+'''Prediction'''
+res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])
+st.write(res)
 
 
 df = pd.DataFrame(dict(
