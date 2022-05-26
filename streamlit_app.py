@@ -20,11 +20,12 @@ st.title('Iris Dataset')
 # petal length (cm) min 1.0 max 6.9
 # petal width (cm) min 0.1 max 2.5
 
-
-sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
-sepal_width = st.slider('sepal width', 2.0, 4.4, (2.0+4.4)/2)
-petal_length = st.slider('petal length', 1.0, 6.9, (1.0+6.9)/2)
-petal_width = st.slider('petal width', 0.1, 2.5, (0.1+2.5)/2)
+# TODO: move to side nav bar
+with st.sidebar:
+    sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
+    sepal_width = st.slider('sepal width', 2.0, 4.4, (2.0+4.4)/2)
+    petal_length = st.slider('petal length', 1.0, 6.9, (1.0+6.9)/2)
+    petal_width = st.slider('petal width', 0.1, 2.5, (0.1+2.5)/2)
 
 # load clf
 clf = load('./iris.joblib')
@@ -36,7 +37,8 @@ df = pd.DataFrame(dict(
 fig = px.line_polar(df, r='r', theta='theta', line_close=True)
 st.plotly_chart(fig)
 
-
+# TODO: name of the prediction
+# TODO: images of different ones/highlight?
 '''Prediction'''
 res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
 st.write(res)
