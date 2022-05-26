@@ -6,6 +6,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from joblib import dump, load
 import plotly.express as px
+from sklearn datasets
+iris = datasets.load_iris()
 
 # model from here: https://colab.research.google.com/drive/1RROEcn1EaI564_TlptQquU9HF68q7E38?usp=sharing
 
@@ -20,7 +22,6 @@ st.title('Iris Dataset')
 # petal length (cm) min 1.0 max 6.9
 # petal width (cm) min 0.1 max 2.5
 
-# TODO: move to side nav bar
 with st.sidebar:
     sepal_length = st.slider('sepal length', 4.3, 7.9, (4.3+7.9)/2)
     sepal_width = st.slider('sepal width', 2.0, 4.4, (2.0+4.4)/2)
@@ -42,3 +43,5 @@ st.plotly_chart(fig)
 '''Prediction'''
 res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
 st.write(res)
+st.write(iris.target_names[0])
+
