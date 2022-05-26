@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from joblib import dump, load
 import plotly.express as px
-from sklearn datasets
+from sklearn import datasets
 iris = datasets.load_iris()
 
 # model from here: https://colab.research.google.com/drive/1RROEcn1EaI564_TlptQquU9HF68q7E38?usp=sharing
