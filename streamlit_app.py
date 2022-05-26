@@ -40,8 +40,7 @@ st.plotly_chart(fig)
 
 # TODO: name of the prediction
 # TODO: images of different ones/highlight?
-'''Prediction'''
+
 res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
-st.write(res)
-st.write(iris.target_names[res])
+st.write('''Prediction:''', iris.target_names[res])
 
