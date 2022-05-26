@@ -43,5 +43,7 @@ st.plotly_chart(fig)
 
 res = clf.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
 st.write('''*Prediction*:''', iris.target_names[res])
-st.write('Probabilities: ',clf.predict_proba([[sepal_length, sepal_width, petal_length, petal_width]]))
+
+# TODO: probabilities
+# st.write('Probabilities: ',clf.predict_proba([[sepal_length, sepal_width, petal_length, petal_width]]))
 
